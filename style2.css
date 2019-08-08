@@ -1,0 +1,379 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 54px;
+}
+
+h2 {
+  font-size: 31.5px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+h5 {
+  font-size: 21px;
+  line-height: 31.5px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+p {
+  font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.valign, body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background: #333;
+  height: auto;
+  width: 100%;
+}
+
+body {
+  background: #282836;
+  margin: 5%;
+  width: 1400px;
+}
+
+/* REMOVE CHROME BLUE BORDER FOR BUTTON AND CREATE GLOBAL BUTTON PROPERTIES */
+button {
+  outline: none;
+  border: none;
+  margin: 5px;
+  font-family: ProximaNova-Semibold;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* DEFINE SEPARATE BUTTON CLASS SIZES INDEPENDENTLY TO WE CAN CONTROL THE SIZE OF ALL BIG BUTTONS WITHOUT CHANGING MULTIPLE CLASSES */
+.big-btn {
+  height: 54px;
+  width: 255px;
+  font-size: 15px;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: #0592ec;
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.primary:hover {
+  background: #5bbdfc;
+  color: white;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.primary:active {
+  background: #0474bc;
+  -webkit-transition: all 0ms ease-out;
+  -moz-transition: all 0ms ease-out;
+  -ms-transition: all 0ms ease-out;
+  -o-transition: all 0ms ease-out;
+  transition: all 0ms ease-out;
+}
+
+/* SECONDARY BUTTON */
+.secondary {
+  border-radius: 5px;
+  border: solid 1.4px #0592ec;
+  color: #0692ec;
+  background: none;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.secondary:hover {
+  background: #0592ec;
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.secondary:active {
+  background-color: #cacfe0;
+  border: solid 1.4px #cacfe0;
+  -webkit-transition: all 0ms ease;
+  -moz-transition: all 0ms ease;
+  -ms-transition: all 0ms ease;
+  -o-transition: all 0ms ease;
+  transition: all 0ms ease;
+}
+
+/* TERTIARY BUTTON */
+.tertiary {
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.tertiary:hover {
+  background: black;
+  color: white;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.tertiary:active {
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0ms ease-out;
+  -moz-transition: all 0ms ease-out;
+  -ms-transition: all 0ms ease-out;
+  -o-transition: all 0ms ease-out;
+  transition: all 0ms ease-out;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  font-family: bf-icons;
+  width: 52px;
+}
+
+.back-btn:before {
+  content: "\e935";
+}
+
+/* ADD THIS ARROW CLASS TO ANYTHING THAT NEEDS AN ARROW ANIMATION -- IT REQUIRES A SPAN AS THE TEXT TO WORK */
+.arrow span:after {
+  content: "\e934";
+  font-family: bf-icons;
+  position: absolute;
+  opacity: 0;
+  color: white;
+  top: 0px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.arrow:hover span:after {
+  opacity: 1;
+  right: -35px;
+}
+
+.arrow span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* MENU ALIGNMENT TOGGLE BUTTONS */
+.toggle {
+  font-family: bf-icons;
+  font-size: 21px;
+  color: #FFFFFF;
+  width: 47px;
+  height: 47px;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.toggle:hover {
+  background: black;
+  color: white;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.toggle:active,
+.toggle:focus {
+  background: black;
+  border: 2px solid rgba(189, 195, 217, 0.67);
+  -webkit-transition: all 0ms ease-in;
+  -moz-transition: all 0ms ease-in;
+  -ms-transition: all 0ms ease-in;
+  -o-transition: all 0ms ease-in;
+  transition: all 0ms ease-in;
+  animation: wiggle 200ms ease-in;
+}
+
+/* ANIMATION FOR MENU ALIGNMENT TOGGLES */
+@keyframes wiggle {
+  0% {
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  50% {
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+/* COLORED TOOLBAR BUTTONS */
+/* APPLIES TO ALL 3 BUTTONS */
+.toolbar {
+  height: 54px;
+  width: 145px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+/* MOODS BUTTON */
+.mood-color {
+  border-left: 5px solid #35D7AF;
+}
+
+/*HOVER ANIMATION */
+.mood-color:hover {
+  border: 0px solid black;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+/* FONTS BUTTON */
+.fonts-color {
+  border-left: 5px solid #EA1D63;
+}
+
+/*HOVER ANIMATION */
+.fonts-color:hover {
+  border: 0px solid black;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+/* LAYOUTS BUTTON */
+.layouts-color {
+  border-left: 5px solid #0592EC;
+}
+
+/* HOVER ANIMATION */
+.layouts-color:hover {
+  border: 0px solid black;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+/* LAYOUTS BUTTON */
+.layouts-wiggle {
+  border-left: 5px solid #0592EC;
+  animation: notice-me 2s 1;
+}
+
+/* HOVER ANIMATION */
+.layouts-wiggle:hover {
+  border: 0px solid black;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+/* ANIMATION THAT HAPPENS WHEN THEY FIRST ENTER THE PAGE. IT WIGGLES WHEN THEY FIRST ENTER THE PAGE SO THEY NOTICE THAT THEY CAN CHANGE THE LAYOUTS */
+@keyframes notice-me {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+    background: #0592EC;
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
